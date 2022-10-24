@@ -28,18 +28,18 @@ if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()
 
 # API URLS
-urlpatterns += [
-    # API base url
-    path("api/", include("config.api_router")),
-    # DRF auth token
-    path("auth-token/", obtain_auth_token),
-    path("api/schema/", SpectacularAPIView.as_view(), name="api-schema"),
-    path(
-        "api/docs/",
-        SpectacularSwaggerView.as_view(url_name="api-schema"),
-        name="api-docs",
-    ),
-]
+# urlpatterns += [
+#     # API base url
+#     path("api/", include("config.api_router")),
+#     # DRF auth token
+#     path("auth-token/", obtain_auth_token),
+#     path("api/schema/", SpectacularAPIView.as_view(), name="api-schema"),
+#     path(
+#         "api/docs/",
+#         SpectacularSwaggerView.as_view(url_name="api-schema"),
+#         name="api-docs",
+#     ),
+# ]
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
