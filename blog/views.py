@@ -36,7 +36,7 @@ class BlogDetailView(generic.FormView, generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["form"] = CommentForm()
-        context["comment"] = Comment.objects.filter(post=self.get_object()).oreder_by("-created_on")
+        context["comment"] = Comment.objects.filter(post=self.get_object()).order_by("-created_on")
 
     def post(self, request, *args, **kwargs):
         form = CommentForm(request.POST)
