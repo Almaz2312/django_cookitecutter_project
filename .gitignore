@@ -329,4 +329,4 @@ my_awesome_project/media/
 .ipython/
 .env
 .envs/*
-!.envs/.local/
+.envs/.local/
